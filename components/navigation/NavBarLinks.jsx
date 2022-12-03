@@ -13,7 +13,7 @@ function NavBarLinks() {
           <Link href="/accounting">Accounting</Link> 
         </li>
         <li>
-          <Link href="/docotors">Docotors</Link> 
+          <Link href="/doctors">Doctors</Link> 
         </li>
         <li>
           <Link href="/mechanics">Mechanics</Link> 

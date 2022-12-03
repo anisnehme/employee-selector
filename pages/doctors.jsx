@@ -3,7 +3,7 @@ import ContentPageHeader from '../components/headers/ContentPageHeader'
 function DocotorPage() {
     return (
         <>
-        <p>Docotor employees</p>
+        <p>Doctor employees</p>
         <ContentPageHeader/>
         </>
     );
