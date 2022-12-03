@@ -1,4 +1,7 @@
- import Head from 'next/head'
+import Head from 'next/head'
+import { LandingPageHeader } from './../components/headers'
+import { NavBar } from './../components/navigation'
+
 export default function Home() {
   return (
         <>
@@ -6,12 +9,9 @@ export default function Home() {
           <meta name="description" content="Select the next best employee for your needs."/>
           <title>Employee Selector</title>
         </Head>
-          <header className='text-center py-[10rem] bg-zinc-500'>
-            <img className="w-[98px] mx-auto" src="myfavicon.svg" alt="next best employee"/>
-             <h1 className='text-6xl text-red-500'>Employee Selector</h1>
-             <p>Select the best employee for your desired needs!</p>
-          </header>
-          
+        <NavBar/>
+        <LandingPageHeader/>
+        <main></main>
         </>
   )
 }
