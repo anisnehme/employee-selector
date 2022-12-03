@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { LandingPageHeader } from './../components/headers'
-import { NavBar } from './../components/navigation'
+import LandingPageHeader  from './../components/headers/LandingPageHeader'
+import NavBar from './../components/navigation/NavBar'
 
 export default function Home() {
   return (
@@ -9,7 +9,6 @@ export default function Home() {
           <meta name="description" content="Select the next best employee for your needs."/>
           <title>Employee Selector</title>
         </Head>
-        <NavBar/>
         <LandingPageHeader/>
         <main></main>
         </>

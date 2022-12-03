@@ -1,4 +1,4 @@
-import { NavBar } from './../navigation/NavBar'
+import NavBar from './../navigation/NavBar'
 function DefaultLayout({children, ...props}) {
     return (
         <>

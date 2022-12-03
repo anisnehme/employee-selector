@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { DefaultLayout } from './../components/layouts'
+import DefaultLayout from './../components/layouts/DefaultLayout'
 
 import '../styles/global.css';
 
@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps }) {
     </Head>
     <DefaultLayout>
     <Component {...pageProps} />
-   </DefaultLayout>
+    </DefaultLayout>
   </>
   )
 }
 
-export default MyApp;
+export default MyApp
