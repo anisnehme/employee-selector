@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(context) {
@@ -8,10 +8,12 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang={this.props.locale}>
+      <Html lang="en">
+       
         <Head>
-          <link rel="icon" href="myfavicon.svg" type="image/svg+xml"/>
+          <link rel="icon" href="myfavicon.svg" type="image/svg+xml"/> 
         </Head>
+        
         <body>
           <Main />
           <NextScript />

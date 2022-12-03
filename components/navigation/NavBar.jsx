@@ -1,15 +1,29 @@
-import MobileMenuButton from './MobileMenuButton'
-import NavBarBranding from './NavBarBranding'
+import MobileMenuButton from './MobileMenuButton';
+import NavBarBranding from './NavBarBranding';
 import NavBarLinks from './NavBarLinks'
-import LoginButton from './LoginButton'
+import LoginLink from './LoginLink'
+import GitHubLink from './GitHubLink';
+import DeploymentLink from './DeploymenLink';
 function NavBar() {
     return (
-        <nav className='p-2 shadow relative flex justify-between items-center'>
+        <nav className='py-3  px-5 shadow relative flex justify-between items-center'>
             <NavBarBranding/>
             <NavBarLinks/>
-            <LoginButton className='md:block text-right'/>
-            <MobileMenuButton className="md:hidden"/>
- 
+           <div className='hidden md:flex gap-8'>
+           <figure className='flex flex-col items-center  '>
+               <LoginLink  />
+              <figcaption className='text-[11px] text-red-600'>Log In</figcaption>
+              </figure>
+              <figure className='flex flex-col items-center'>
+              <DeploymentLink  />
+              <figcaption className='text-[11px] text-green-600'>Deploy</figcaption>
+              </figure>
+              <figure className='flex flex-col items-center'>
+              <GitHubLink  />
+              <figcaption className='text-[11px] text-blue-600'>Github</figcaption>
+              </figure>
+           </div>
+            <MobileMenuButton/>
         </nav>
       );
 }

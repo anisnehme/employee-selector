@@ -16,8 +16,10 @@ function LandingPageHeader() {  return (
         </figcaption>
         
          <Image
+           className="w-full sm:w-2/3 md:w-5/12 lg:w-5/12"
            src={bannerImage}
            alt='next best employee banner'
+           priority={true}
          />
 
       </figure>

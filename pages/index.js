@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import LandingPageHeader  from './../components/headers/LandingPageHeader'
-import NavBar from './../components/navigation/NavBar'
+import { LandingPageHeader } from '../components/headers'
 
 export default function Home() {
   return (

@@ -1,12 +1,39 @@
-import ContentPageHeader from '../components/headers/ContentPageHeader'
+import {ContentPageLayout} from './../components/layouts'
+import {EmployeeCard} from './../components/employees'
+import { getEmployees } from '../libs/getEmployees';
 
-function ContructionPage() {
-    return (
+function ConstructionPage({emps}) {
+    return (    
         <>
-        <p>Contruction employees</p>
-        <ContentPageHeader/>
+        { emps.map(emps=>  <EmployeeCard key={emps.uid} 
+         fullName={emps.fullName} 
+         avatar={emps.avatar}
+         jobTitle={emps.jobTitle}
+         experience={emps.experience}
+         availability={emps.availability}
+         />
+         )}
         </>
     );
 }
+export default ConstructionPage;
 
-export default ContructionPage;
+ConstructionPage.getLayout = function getLayout(page) {
+    return (
+      <ContentPageLayout  type='construction workers'  title='What are you building?'  tagline='choose a construction worker for your needs'>
+        {page} 
+      </ContentPageLayout>
+    )
+  }
+
+  export async function getStaticProps(content){
+    const emps = await getEmployees()
+    
+    const backEnd = emps.filter(emp=> emp.type==='construction')
+    console.log(backEnd)
+   return{
+    props:{
+     emps:backEnd
+    }
+   }
+   }
