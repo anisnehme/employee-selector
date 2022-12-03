@@ -1,12 +1,12 @@
 import ContentPageHeader from '../components/headers/ContentPageHeader'
 
-function ContructionPage() {
+function AccountingPage() {
     return (
         <>
-        <p>Contruction employees</p>
+        <p>Accounting employees</p>
         <ContentPageHeader/>
         </>
     );
 }
 
-export default ContructionPage;
+export default AccountingPage;

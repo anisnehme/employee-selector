@@ -7,16 +7,16 @@ function NavBarLinks() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/frontend">Contruction</Link>
+          <Link href="/construction">Contruction</Link>
         </li>
         <li>
-          <Link href="/uiux">Accounting</Link> 
+          <Link href="/accounting">Accounting</Link> 
         </li>
         <li>
-          <Link href="/fullstack">Docotors</Link> 
+          <Link href="/docotors">Docotors</Link> 
         </li>
         <li>
-          <Link href="/backend">Mechanics</Link> 
+          <Link href="/mechanics">Mechanics</Link> 
         </li>
       </ul>
      );
