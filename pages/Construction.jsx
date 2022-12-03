@@ -1,6 +1,6 @@
 function UiUxPage() {
     return (
-        <p>ui ux page</p>
+        <p>Contruction employees</p>
     );
 }
 
