@@ -1,13 +1,15 @@
 import Image from 'next/image'
+import Link from "next/link"
 
-function EmployeeCard({fullName, avatar, jobTitle, experience, availability}) {
+function EmployeeCard({fullName, avatar, jobTitle, experience, availability, uid}) {
       const variants = {
         available: 'bg-lime-400 rounded-md px-3 py-1 text-sm text-lime-50',
         unavailable: 'bg-red-400 rounded-md px-3 py-1 text-sm text-red-50'
-      }
+      };
     return ( 
         <aside className='w-full m-4 sm:m-0 sm:w-[calc(50%_-_0.5rem)] lg:w-[calc(33%_-_1rem)]  
            py-10 border border-gray-200/50 rounded-md shadow-md   '>
+            <Link href={`/employee/${uid}`}>
             <header className='flex flex-col items-center  '>
                <Image
                 src={avatar}
@@ -28,6 +30,7 @@ function EmployeeCard({fullName, avatar, jobTitle, experience, availability}) {
                 <dt className='sr-only'>Availability</dt>
                 <dd className={` ${availability? variants.available : variants.unavailable}`}   >{availability? "available": " unavailable"}</dd>
               </dl>
+              </Link>
         </aside>
      );
 }

@@ -5,7 +5,7 @@ function NavBarBranding({className, ...props}) {
         <figure className='flex items-center gap-1'>
         <LogoSvg className="fill-red-500 w-6"/>
         <figcaption>
-            <h1 className='text-slate-600 font-bold'>Next Best Dev</h1>
+            <h1 className='text-slate-600 font-bold'>Employee Selector</h1>
         </figcaption>
     </figure>
       );

@@ -11,6 +11,7 @@ function ConstructionPage({emps}) {
          jobTitle={emps.jobTitle}
          experience={emps.experience}
          availability={emps.availability}
+         uid={emps.uid}
          />
          )}
         </>
@@ -29,11 +30,11 @@ ConstructionPage.getLayout = function getLayout(page) {
   export async function getStaticProps(content){
     const emps = await getEmployees()
     
-    const backEnd = emps.filter(emp=> emp.type==='construction')
-    console.log(backEnd)
+    const construction = emps.filter(emp=> emp.type==='construction')
+    console.log(construction)
    return{
     props:{
-     emps:backEnd
+     emps:construction
     }
    }
    }

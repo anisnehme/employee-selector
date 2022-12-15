@@ -11,6 +11,7 @@ function DocotorPage({emps}) {
          jobTitle={emps.jobTitle}
          experience={emps.experience}
          availability={emps.availability}
+         uid={emps.uid}
          />
          )}
         </>
@@ -29,11 +30,11 @@ DocotorPage.getLayout = function getLayout(page) {
   export async function getStaticProps(content){
     const emps = await getEmployees()
     
-    const backEnd = emps.filter(emp=> emp.type==='docotors')
-    console.log(backEnd)
+    const docotors = emps.filter(emp=> emp.type==='docotors')
+    console.log(docotors)
    return{
     props:{
-     emps:backEnd
+     emps:docotors
     }
    }
    }
